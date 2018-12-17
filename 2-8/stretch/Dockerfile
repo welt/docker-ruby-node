@@ -24,7 +24,7 @@ RUN set -ex \
   done
 
 ENV NODE_MAJOR 8
-RUN apt-get update && apt-get install curl -y
+RUN apt-get update && apt-get install curl rsync -y
 
 RUN NODE_VERSION=$(curl -SL "https://nodejs.org/dist/index.tab" \
   | grep "^v$NODE_MAJOR" \
